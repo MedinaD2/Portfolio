@@ -1,1 +1,234 @@
-:root
+:root {
+  --secondary-color: rgb(114, 110, 110);
+  --primary-color: rgb(149, 189, 204);
+  --primary-font-color: rgb(252, 252, 252);
+  --button-hover: rgb(178, 196, 199);
+  --shadow-border-color: rgb(76, 156, 163);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(227, 233, 233);
+}
+
+span {
+  background-color: rgba(23, 24, 24, 0.7);
+  padding: 5px;
+}
+
+/* HEADER!!! */
+header {
+  padding: 20px 35px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(
+      rgba(121, 184, 175, 0.253),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/tron2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 9999;
+}
+
+header h1 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 36px;
+  color: var(--primary-font-color);
+  font-family: "arial";
+  
+}
+
+header a {
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+
+header nav {
+  margin: 10px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  margin: 0 30px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  font-family: "arial";
+  text-shadow: -1px 0px 3px var(--shadow-border-color),
+    -1px 0px 3px var(--shadow-border-color);
+}
+
+header nav ul li a:hover {
+  background: var(--button-hover);
+  color: var(--primary-font-color);
+  border-radius: 28px;
+}
+
+/* H E R O */
+.hero {
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 250px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  border-bottom: 5px solid var(--shadow-border-color);
+  background-image: linear-gradient(
+      rgba(121, 184, 175, 0.253),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/painting.jpg");
+}
+
+.hero-title {
+  font-family: "arial";
+  color: var(--primary-font-color);
+  text-shadow: -1px 0px 3px var(--shadow-border-color),
+    -1px 0px 3px var(--shadow-border-color);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: flex-end;
+  margin: 15px;
+  
+}
+/* MAIN BODY */
+.main {
+  display: flex;
+}
+.body-title {
+  border-right: 3px solid var(--secondary-color);
+  margin: 5px 0px 10px 10px;
+  padding: 5px 10px 10px 10px;
+  left: 0;
+  flex: 1 20%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.body-title h2 {
+  font-family: "arial";
+  color: var(--primary-font-color);
+  text-shadow: -1px 0px 3px var(--shadow-border-color),
+    -1px 0px 3px var(--shadow-border-color);
+  font-size: 2rem;
+}
+
+.body-box {
+  margin: 10px 10px 10px 20px;
+  flex: 2 80%;
+  flex-wrap: wrap;
+}
+
+/* ABOUT ME  */
+
+.body-box p {
+  color: var(--shadow-border-color);
+  font-family: "arial";
+  font-weight: bold;
+  text-align:justify;
+}
+img {
+  float: right;
+  margin: 10px;
+  padding: 5px;
+  width: 200px;
+}
+/* WORK*/
+
+.work-wrapper {
+  display: grid;
+  margin: 10px 10px 10px 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(100px, 1fr));
+  grid-auto-flow: dense;
+  grid-gap: 20px;
+}
+
+.work-grid {
+  border: 3px solid var(--shadow-border-color);
+  display: flex;
+  align-items: flex-end;
+
+}
+
+.work-grid a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "arial";
+  color: var(--primary-font-color);
+  text-shadow: -1px 0px 3px var(--shadow-border-color),
+    -1px 0px 3px var(--shadow-border-color);
+}
+
+.title-link {
+  flex: wrap;
+  justify-content: flex-end;
+  margin: 0 0 10px 0;
+  padding: 11px;
+  background-color: var(--button-hover);
+  opacity: 70%;
+}
+
+.run-buddy {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  background: cover;
+}
+
+.project3 {
+  background-size: cover;
+}
+
+.project4 {
+  background-size: cover;
+}
+
+.project5 {
+  background: url(../images/proj5.jpg);
+  background-size: cover;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-wrapper {
+  display: grid;
+  margin: 10px 10px 10px 20px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-auto-flow: dense;
+  grid-gap: 35px;
+}
+
+.contact-grid a {
+  text-decoration: none;
+  color: var(--primary-font-color);
+  text-shadow: -1px 0px 3px var(--shadow-border-color),
+    -1px 0px 3px var(--shadow-border-color);
+  border-bottom: 5px solid var(--shadow-border-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "arial";
+  display: flex;
+  justify-content: space-around;
+}
